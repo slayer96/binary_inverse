@@ -3,14 +3,14 @@
 def O(n):
     if len(n) == 1 and n[0] == 0:
         return [0]
-    n.reverse()
+    #n.reverse()
     dec = 0
     index = 0
     for i in n:
         tmp = i * ((-2) ** index)
         index += 1
         dec += tmp
-    print(dec)
+    #print(dec)
     dec *= -1
 
     result = []
@@ -21,8 +21,8 @@ def O(n):
             tmp += 2
             dec += 1
         result.append(tmp)
-    result.reverse()
+    #result.reverse()
     return result
 
 if __name__ == '__main__':
-    pass
+    print(O([1, 0, 1, 1, 0, 1]))
